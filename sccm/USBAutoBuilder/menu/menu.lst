@@ -1,0 +1,20 @@
+# Columbia Business School Boot Menu - zmoffitt - 20 April 2017
+default 2
+timeout 1
+color NORMAL HIGHLIGHT HELPTEXT HEADING
+splashimage=/multiboot/menu/cbs.xpm.gz
+foreground=FFFFFF
+background=000000
+
+title --- SCCM Boot Options ---
+root
+
+title <-- Back to Main Menu
+root (hd0,0)
+chainloader (hd0)+1
+rootnoverify (hd0)
+
+#start deployMedia-20170417
+title Install deployMedia-latest
+chainloader /bootmgr
+#end deployMedia-20170417

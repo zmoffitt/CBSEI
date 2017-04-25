@@ -1,0 +1,10 @@
+list volume
+select volume DSK
+clean
+create partition primary
+select partition 1
+active
+format fs=NTFS quick label=MULTIBOOT override
+assign letter DSK
+list volume
+exit
